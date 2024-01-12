@@ -1,5 +1,6 @@
 import React from 'react';
 import {Tabs, Layout} from 'antd';
+import {Header, Content, Footer} from "antd/es/layout/layout";
 import type {TabsProps} from 'antd';
 import {AndroidOutlined, AppleOutlined} from '@ant-design/icons';
 import kvs from "@/app/component/kvs";
@@ -24,14 +25,14 @@ const items: TabsProps['items'] = [
 const Home: React.FC = () => {
     return (
         <Layout>
-            <Layout.Header style={{display: 'flex', alignItems: 'center'}}>
-            </Layout.Header>
-            <Layout.Content style={{padding: '0 48px'}}>
+            <Header style={{display: 'flex', alignItems: 'center'}}>
+            </Header>
+            <Content style={{padding: '0 48px'}}>
                 <Tabs defaultActiveKey="kvs" items={items}/>
-            </Layout.Content>
-            <Layout.Footer style={{textAlign: 'center'}}>
-                SwitchBot ©{new Date().getFullYear()} Created by SwitchBot
-            </Layout.Footer>
+            </Content>
+            <Footer style={{textAlign: 'center'}}>
+                Python Web ©{new Date().getFullYear()} Created by C.body
+            </Footer>
         </Layout>
     )
 }
